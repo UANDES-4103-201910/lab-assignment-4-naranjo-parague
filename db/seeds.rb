@@ -6,43 +6,43 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 users = [User.new(name:'Claudio', lastname:'Alvarez', \
-              password:'123456', email:'calvarez1@miuandes.cl', \
-              address:'San Carlos de Apoquindo'), 
+              password:'12345612', email:'calvarez1@miuandes.cl', \
+              address:'San Carlos de Apoquindo', phone:'123456789'),
          User.new(name:'Juan', lastname:'Rataplan', \
-              password:'123456', email:'jrataplan@miuandes.cl', \
-              address:'San Carlos de Apoquindo'),
+              password:'12345678', email:'jrataplan@miuandes.cl', \
+              address:'San Carlos de Apoquindo', phone:'123123123'),
          User.new(name:'Raul', lastname:'Rabufetti', \
-              password:'123456', email:'rrabufetti@miuandes.cl', \
-              address:'San Carlos de Apoquindo'),
+              password:'123456789', email:'rrabufetti@miuandes.cl', \
+              address:'San Carlos de Apoquindo', phone:'321321321'),
          User.new(name:'Raul', lastname:'Ganfolfi', \
-              password:'123456', email:'rgandolfi@miuandes.cl', \
-              address:'San Carlos de Apoquindo'),
+              password:'12345678901', email:'rgandolfi@miuandes.cl', \
+              address:'San Carlos de Apoquindo', phone:'4321432143'),
          User.new(name:'Licenciado', lastname:'Varela', \
-              password:'123456', email:'lvarela@miuandes.cl', \
-              address:'San Carlos de Apoquindo')]
-              
+              password:'123456789012', email:'lvarela@miuandes.cl', \
+              address:'San Carlos de Apoquindo', phone:'123456787')]
+
 for u in users do
   u.save!
-end 
+end
 
 event_venues = [EventVenue.new(name: 'Estadio Nacional', address:'Maraton', capacity: 60000),\
                 EventVenue.new(name: 'Estadio Monumental', address:'Exequiel', capacity: 25000),\
                 EventVenue.new(name: 'Movistar Arena', address:'Matta', capacity: 15000)]
-                
+
 for ev in event_venues do
   ev.save!
-end 
+end
 
 events = [Event.new(name:'Festival de la Cancion', description: 'Puro reggaeton',\
-          start_date: '2019-03-01', event_venue: event_venues[0]),
+          start_date: '2020-03-01', event_venue: event_venues[0]),
           Event.new(name:'Twisted Sister', description: 'Puro rock',\
-          start_date: '2019-04-01', event_venue: event_venues[1]),
+          start_date: '2020-04-01', event_venue: event_venues[1]),
           Event.new(name:'Bad Bunny', description: 'Puro Trap',\
-          start_date: '2019-05-01', event_venue: event_venues[2])]
+          start_date: '2020-05-01', event_venue: event_venues[2])]
 
 for e in events do
   e.save!
-end 
+end
 
 ticket_zones = [TicketZone.new(zone: 'Cancha'),\
                 TicketZone.new(zone: 'Pacifico'),\
@@ -50,7 +50,7 @@ ticket_zones = [TicketZone.new(zone: 'Cancha'),\
 
 for tz in ticket_zones do
   tz.save!
-end 
+end
 
 prices = [20000, 30000, 40000]
 
@@ -66,7 +66,7 @@ end
 
 for tt in ticket_types do
   tt.save!
-end 
+end
 
 for u in users do
   for e in events do
@@ -78,5 +78,3 @@ for u in users do
     t.save!
   end
 end
-
-
